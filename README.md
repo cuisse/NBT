@@ -60,9 +60,9 @@ import io.github.cuisse.nbt.tags.IntTag;
 import io.github.cuisse.nbt.tags.ListTag;
 
 var numbers = ListTag.create(
+        IntTag.create(0),
         IntTag.create(1),
         IntTag.create(2),
-        IntTag.create(0),
 );
 
 System.out.println(numbers.getAt(1).value()); // Integer -> 1
