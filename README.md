@@ -1,9 +1,12 @@
 # NBT 
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.cuisse/nbt.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/io.github.cuisse/nbt)
+[![javadoc](https://javadoc.io/badge2/io.github.cuisse/nbt/javadoc.svg)](https://javadoc.io/doc/io.github.cuisse/nbt)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Simple NBT library written in Java.
+NBT library in Java.
 
 ## Usage
-### Compound
+Creating a simple compound:
 ```java
 import io.github.cuisse.nbt.NamedTag;
 import io.github.cuisse.nbt.tags.IntTag;
@@ -53,7 +56,7 @@ System.out.println(profile.get("name").value()); // String  -> John
 System.out.println(profile.get("age", IntTag.class).primitiveValue()); // int -> 42
 ```
 
-### List:
+You can also work with a List:
 ```java
 import io.github.cuisse.nbt.Tag;
 import io.github.cuisse.nbt.tags.IntTag;
@@ -69,7 +72,7 @@ System.out.println(numbers.getAt(1).value()); // Integer -> 1
 ```
 
 ### Printing
-Very easy, you can use ```io.github.cuisse.nbt.Tag::toString``` or ```io.github.cuisse.nbt.Tag::prettyPrint(tag, depth)```. For example:
+Printing is very easy, you can use ```io.github.cuisse.nbt.Tag::toString``` or ```io.github.cuisse.nbt.Tag::prettyPrint(tag, depth)```. For example:
 
 ```java
 import io.github.cuisse.nbt.Tag;
