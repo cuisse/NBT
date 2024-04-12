@@ -13,6 +13,11 @@ public class EndTag implements Tag {
 
     public static final EndTag DEFAULT = new EndTag();
 
+    /**
+     * Creates a new {@link EndTag}.
+     *
+     * @return the new tag.
+     */
     public static EndTag create() {
         return DEFAULT;
     }

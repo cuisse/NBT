@@ -15,13 +15,20 @@ public class StringTag implements Tag {
 
     private final String value;
 
+    /**
+     * Creates a new {@link StringTag} with the specified value.
+     *
+     * @param value the value of the tag.
+     * @return the new tag.
+     * @throws NullPointerException if the value is {@code null}.
+     */
     public static StringTag create(String value) {
         return new StringTag(value);
     }
 
     private StringTag(String value) {
         if (value == null) {
-            throw new IllegalArgumentException("Value cannot be null");
+            throw new NullPointerException("value == null");
         }
         this.value = value;
     }

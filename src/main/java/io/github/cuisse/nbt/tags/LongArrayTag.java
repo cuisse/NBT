@@ -15,6 +15,12 @@ public class LongArrayTag implements Tag {
 
     public static final LongArrayTag DEFAULT = new LongArrayTag(new long[0]);
 
+    /**
+     * Creates a new {@link LongArrayTag} with the specified value.
+     *
+     * @param value the value of the tag.
+     * @return the new tag.
+     */
     public static LongArrayTag create(long[] value) {
         return value.length == 0 ? DEFAULT : new LongArrayTag(value);
     }

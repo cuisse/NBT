@@ -25,6 +25,12 @@ public class ShortTag implements Tag {
         }
     }
 
+    /**
+     * Creates a new {@link ShortTag} with the specified value.
+     *
+     * @param value the value of the tag.
+     * @return the new tag.
+     */
     public static ShortTag create(int value) {
         return (value >= CACHE_MIN && value <= CACHE_MAX) ? CACHE[value + CACHE_OFF] : new ShortTag((short) value);
     }
@@ -72,4 +78,5 @@ public class ShortTag implements Tag {
     public String toString() {
         return "ShortTag(" + value + ')';
     }
+
 }

@@ -13,6 +13,12 @@ public class ByteBufferOutputStream extends OutputStream {
 
     private final ByteBuffer buffer;
 
+    /**
+     * Creates a new ByteBufferOutputStream that writes to the specified ByteBuffer.
+     * 
+     * @param buffer the ByteBuffer to write to.
+     * @throws NullPointerException if the buffer is null.
+     */
     public ByteBufferOutputStream(ByteBuffer buffer) {
         if (buffer == null) {
             throw new NullPointerException("buffer == null");
@@ -35,6 +41,8 @@ public class ByteBufferOutputStream extends OutputStream {
     public void flush() { }
 
     @Override
-    public void close() { }
+    public void close() {
+        // User is responsible for closing the buffer.
+    }
 
 }

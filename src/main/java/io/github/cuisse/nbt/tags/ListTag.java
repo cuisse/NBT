@@ -77,6 +77,10 @@ public class ListTag implements Tag {
         this.value = unmodifiable(value);
     }
 
+    /**
+     * Returns the {@link TagType} of the children {@link Tag}s.
+     * @return The {@link TagType} of the children {@link Tag}s.
+     */
     public TagType getType() {
         return type;
     }

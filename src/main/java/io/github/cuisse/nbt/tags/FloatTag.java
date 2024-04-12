@@ -13,6 +13,12 @@ public class FloatTag implements Tag {
 
     public static final FloatTag DEFAULT = new FloatTag(0);
 
+    /**
+     * Creates a new {@link FloatTag} with the specified value.
+     *
+     * @param value the value of the tag.
+     * @return the new tag.
+     */
     public static FloatTag create(float value) {
         return value == 0f ? DEFAULT : new FloatTag(value);
     }

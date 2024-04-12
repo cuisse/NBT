@@ -25,6 +25,12 @@ public class LongTag implements Tag {
         }
     }
 
+    /**
+     * Creates a new {@link LongTag} with the specified value.
+     *
+     * @param value the value of the tag.
+     * @return the new tag.
+     */
     public static LongTag create(long value) {
         return (value >= CACHE_MIN && value <= CACHE_MAX) ? CACHE[(int) value + CACHE_OFF] : new LongTag(value);
     }

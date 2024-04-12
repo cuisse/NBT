@@ -13,6 +13,12 @@ public class DoubleTag implements Tag {
 
     public static final DoubleTag DEFAULT = new DoubleTag(0d);
 
+    /**
+     * Creates a new {@link DoubleTag} with the specified value.
+     *
+     * @param value the value of the tag.
+     * @return the new tag.
+     */
     public static DoubleTag create(double value) {
         return value == 0d ? DEFAULT : new DoubleTag(value);
     }

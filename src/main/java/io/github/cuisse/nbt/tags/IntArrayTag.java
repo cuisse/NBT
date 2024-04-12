@@ -15,6 +15,12 @@ public class IntArrayTag implements Tag {
 
     public static final IntArrayTag DEFAULT = new IntArrayTag(new int[0]);
 
+    /**
+     * Creates a new {@link IntArrayTag} with the specified value.
+     *
+     * @param value the value of the tag.
+     * @return the new tag.
+     */
     public static IntArrayTag create(int[] value) {
         return value.length == 0 ? DEFAULT : new IntArrayTag(value);
     }

@@ -25,6 +25,12 @@ public class ByteTag implements Tag {
         }
     }
 
+    /**
+     * Creates a new {@link ByteTag} with the specified value.
+     *
+     * @param value the value of the tag.
+     * @return the new tag.
+     */
     public static ByteTag create(int value) {
         return CACHE[value + CACHE_OFF];
     }

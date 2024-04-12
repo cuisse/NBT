@@ -15,6 +15,12 @@ public class ByteArrayTag implements Tag {
 
     public static final ByteArrayTag DEFAULT = new ByteArrayTag(new byte[0]);
 
+    /**
+     * Creates a new {@link ByteArrayTag} with the specified value.
+     *
+     * @param value the value of the tag.
+     * @return the new tag.
+     */
     public static ByteArrayTag create(byte[] value) {
         return value.length == 0 ? DEFAULT : new ByteArrayTag(value);
     }

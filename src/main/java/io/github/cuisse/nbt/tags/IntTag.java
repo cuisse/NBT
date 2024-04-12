@@ -26,6 +26,12 @@ public class IntTag implements Tag {
         }
     }
 
+    /**
+     * Creates a new {@link IntTag} with the specified value.
+     *
+     * @param value the value of the tag.
+     * @return the new tag.
+     */
     public static IntTag create(int value) {
         return (value >= CACHE_MIN && value <= CACHE_MAX) ? CACHE[value + CACHE_OFF] : new IntTag(value);
     }

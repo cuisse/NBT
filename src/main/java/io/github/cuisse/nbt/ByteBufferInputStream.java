@@ -13,6 +13,12 @@ public class ByteBufferInputStream extends InputStream {
 
     private final ByteBuffer buffer;
 
+    /**
+     * Creates a new ByteBufferInputStream that reads from the specified ByteBuffer.
+     * 
+     * @param buffer the ByteBuffer to read from.
+     * @throws NullPointerException if the buffer is null.
+     */
     public ByteBufferInputStream(ByteBuffer buffer) {
         if (buffer == null) {
             throw new NullPointerException("buffer == null");
@@ -67,6 +73,7 @@ public class ByteBufferInputStream extends InputStream {
 
     @Override
     public void close() {
+        // User is responsible for closing the buffer.
     }
 
 }
