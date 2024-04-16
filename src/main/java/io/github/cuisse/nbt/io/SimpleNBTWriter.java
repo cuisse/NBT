@@ -67,7 +67,7 @@ public class SimpleNBTWriter implements NBTWriter {
             output.writeString(name);
             write(output, tag, depth - 1); // write named tag
         });
-        write(output, EndTag.DEFAULT, 0);
+        write(output, EndTag.DEFAULT, depth - 1);
     }
 
 }
